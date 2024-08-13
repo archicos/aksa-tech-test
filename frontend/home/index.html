@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="bg-blue-600 p-4 flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">My App</h1>
+            <div class="relative">
+                <button id="userMenu" class="text-white">User</button>
+                <div id="dropdown"
+                    class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg">
+                    <a href="#" id="editProfile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Edit
+                        Profile</a>
+                    <a href="#" id="logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="p-6">
+            <h2 class="text-xl font-bold mb-4">User Management</h2>
+            <div class="mb-6">
+                <input type="text" id="search" class="mb-4 px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                    placeholder="Search...">
+                <button id="addData" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Add Data</button>
+                <table class="w-full mt-4 border border-gray-300">
+                    <thead>
+                        <tr>
+                            <th class="border px-4 py-2">ID</th>
+                            <th class="border px-4 py-2">Name</th>
+                            <th class="border px-4 py-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTable">
+                    </tbody>
+                </table>
+                <div id="pagination" class="mt-4">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
